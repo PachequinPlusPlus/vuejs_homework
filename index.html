@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>Ravioli</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link href="css/style.css" rel="stylesheet">
+</head>
+
+<body>
+    <h1>Ravioli</h1>
+
+    <div id = "change">
+        <div>
+            <img v-if="seen" v-bind:src="showing" />
+        </div>
+        <button v-on:click='swap'> Change </button>
+        <button v-on:click='seen = !seen'> Toggle Ravioli img, you sure? </button>
+
+        <input v-model = "message" placeholder = "Say something nice to Ravioli">
+        <p> El mensaje para Ravioli es : {{message}} </p>
+
+    </div>
+
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vue@2.5.16/dist/vue.js"></script>
+  <script src="js/script.js"></script>
+</body>
+
+</html>
